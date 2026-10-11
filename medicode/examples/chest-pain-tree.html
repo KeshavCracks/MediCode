@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chest pain triage</title>
+<style>:root{--bg-paper:#fbfaf7;--text-ink:#1a1a1a;--accent-clinical:#0b5d7a;--muted-subtle:#5c5f66;--surface:#ffffff;--on-accent:#ffffff;--warning-clinical:#9a3412;--warning-surface:#fdf1ea}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg-paper);color:var(--text-ink);font:16px/24px system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+main{max-width:1200px;margin:0 auto;padding:32px}
+h1{font-size:24px;line-height:32px;margin:0 0 4px;font-weight:650;letter-spacing:-0.01em}
+.subtitle{margin:0 0 24px;color:var(--muted-subtle)}
+figure{margin:0;overflow-x:auto}
+figcaption,.source{margin-top:16px;font-size:12px;line-height:16px;color:var(--muted-subtle)}
+details{margin-top:24px;font-size:14px;line-height:20px}
+summary{cursor:pointer;color:var(--accent-clinical)}
+summary:focus-visible{outline:2px solid var(--accent-clinical);outline-offset:4px}
+@media print{body{background:#fff}main{padding:0}}
+svg text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+.node rect{fill:var(--surface);stroke:var(--text-ink);stroke-width:1.5}
+.node .label{font-size:14px;font-weight:600;fill:var(--text-ink)}
+.node .detail{font-size:12px;fill:var(--muted-subtle)}
+.node-accent rect{fill:var(--accent-clinical);stroke:var(--accent-clinical)}
+.node-accent .label,.node-accent .detail{fill:var(--on-accent)}
+.node-warning rect{fill:var(--warning-surface);stroke:var(--warning-clinical);stroke-width:2}
+.node-warning .detail{fill:var(--warning-clinical)}
+.node-muted rect{fill:var(--bg-paper);stroke:var(--muted-subtle);stroke-dasharray:4 4}
+.node-muted .label{fill:var(--muted-subtle);font-weight:500}
+.edge{fill:none;stroke:var(--text-ink);stroke-width:1.5}
+.edge-label rect{fill:var(--bg-paper)}
+.edge-label text{font-size:12px;font-weight:600;fill:var(--accent-clinical)}
+.axis{stroke:var(--muted-subtle);stroke-width:2}
+.dot{stroke:var(--bg-paper);stroke-width:2}
+.dot-default{fill:var(--text-ink)}.dot-accent{fill:var(--accent-clinical)}.dot-warning{fill:var(--warning-clinical)}.dot-muted{fill:var(--muted-subtle)}
+.time{font-size:12px;font-weight:600;fill:var(--muted-subtle)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}</style></head>
+<body><main>
+<h1>Chest pain triage</h1>
+
+<figure><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="diagram-title diagram-desc" viewBox="0 0 800 416" width="800" height="416"><title id="diagram-title">Chest pain triage</title><desc id="diagram-desc">decision tree: 12-lead ECG within 10 min; STEMI pathway — activate cath lab; High-sensitivity troponin 0/1 h; NSTE-ACS management; Consider alternative diagnoses; 12-lead ECG within 10 min → STEMI pathway — activate cath lab (ST elevation); 12-lead ECG within 10 min → High-sensitivity troponin 0/1 h (No ST elevation); High-sensitivity troponin 0/1 h → NSTE-ACS management (Rise); High-sensitivity troponin 0/1 h → Consider alternative diagnoses (Rule-out)</desc><defs><marker id="arrow" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="#1a1a1a"/></marker></defs><style>:root{--bg-paper:#fbfaf7;--text-ink:#1a1a1a;--accent-clinical:#0b5d7a;--muted-subtle:#5c5f66;--surface:#ffffff;--on-accent:#ffffff;--warning-clinical:#9a3412;--warning-surface:#fdf1ea}svg text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+.node rect{fill:var(--surface);stroke:var(--text-ink);stroke-width:1.5}
+.node .label{font-size:14px;font-weight:600;fill:var(--text-ink)}
+.node .detail{font-size:12px;fill:var(--muted-subtle)}
+.node-accent rect{fill:var(--accent-clinical);stroke:var(--accent-clinical)}
+.node-accent .label,.node-accent .detail{fill:var(--on-accent)}
+.node-warning rect{fill:var(--warning-surface);stroke:var(--warning-clinical);stroke-width:2}
+.node-warning .detail{fill:var(--warning-clinical)}
+.node-muted rect{fill:var(--bg-paper);stroke:var(--muted-subtle);stroke-dasharray:4 4}
+.node-muted .label{fill:var(--muted-subtle);font-weight:500}
+.edge{fill:none;stroke:var(--text-ink);stroke-width:1.5}
+.edge-label rect{fill:var(--bg-paper)}
+.edge-label text{font-size:12px;font-weight:600;fill:var(--accent-clinical)}
+.axis{stroke:var(--muted-subtle);stroke-width:2}
+.dot{stroke:var(--bg-paper);stroke-width:2}
+.dot-default{fill:var(--text-ink)}.dot-accent{fill:var(--accent-clinical)}.dot-warning{fill:var(--warning-clinical)}.dot-muted{fill:var(--muted-subtle)}
+.time{font-size:12px;font-weight:600;fill:var(--muted-subtle)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}</style><rect width="100%" height="100%" fill="#fbfaf7"/><path class="edge" d="M336 96 V136 H144 V168" marker-end="url(#arrow)"/><g class="edge-label"><rect x="96" y="144" width="96" height="20" rx="2"/><text x="144" y="158" text-anchor="middle">ST elevation</text></g><path class="edge" d="M336 96 V136 H528 V168" marker-end="url(#arrow)"/><g class="edge-label"><rect x="472" y="144" width="116" height="20" rx="2"/><text x="528" y="158" text-anchor="middle">No ST elevation</text></g><path class="edge" d="M528 240 V280 H400 V312" marker-end="url(#arrow)"/><g class="edge-label"><rect x="380" y="288" width="40" height="20" rx="2"/><text x="400" y="302" text-anchor="middle">Rise</text></g><path class="edge" d="M528 240 V280 H656 V312" marker-end="url(#arrow)"/><g class="edge-label"><rect x="624" y="288" width="68" height="20" rx="2"/><text x="656" y="302" text-anchor="middle">Rule-out</text></g><g class="node node-default" data-id="ecg"><rect x="224" y="32" width="224" height="64" rx="4"/><text class="label" x="236" y="59">12-lead ECG within 10</text><text class="label" x="236" y="79">min</text></g><g class="node node-warning" data-id="stemi"><rect x="32" y="176" width="224" height="64" rx="4"/><text class="label" x="44" y="203">STEMI pathway —</text><text class="label" x="44" y="223">activate cath lab</text></g><g class="node node-default" data-id="trop"><rect x="416" y="176" width="224" height="64" rx="4"/><text class="label" x="428" y="203">High-sensitivity</text><text class="label" x="428" y="223">troponin 0/1 h</text></g><g class="node node-accent" data-id="nstemi"><rect x="288" y="320" width="224" height="44" rx="4"/><text class="label" x="300" y="347">NSTE-ACS management</text></g><g class="node node-muted" data-id="alt"><rect x="544" y="320" width="224" height="64" rx="4"/><text class="label" x="556" y="347">Consider alternative</text><text class="label" x="556" y="367">diagnoses</text></g></svg><figcaption>Decision support only — verify against current guidelines and the patient in front of you.</figcaption></figure>
+<p class="source">Source: ESC 2023 ACS guideline (illustrative)</p>
+<details><summary>Text version</summary><ol><li>12-lead ECG within 10 min</li><li>STEMI pathway — activate cath lab</li><li>High-sensitivity troponin 0/1 h</li><li>NSTE-ACS management</li><li>Consider alternative diagnoses</li><li>12-lead ECG within 10 min → STEMI pathway — activate cath lab (ST elevation)</li><li>12-lead ECG within 10 min → High-sensitivity troponin 0/1 h (No ST elevation)</li><li>High-sensitivity troponin 0/1 h → NSTE-ACS management (Rise)</li><li>High-sensitivity troponin 0/1 h → Consider alternative diagnoses (Rule-out)</li></ol></details>
+</main></body></html>

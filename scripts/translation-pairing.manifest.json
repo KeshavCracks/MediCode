@@ -1,0 +1,21 @@
+{
+  "excluded": [
+    ".agents/notes/AGENTS.md",
+    ".agents/notes/implemented/AGENTS.md",
+    ".agents/notes/implemented/CLAUDE.md",
+    ".github/review-ownership/README.md",
+    "README.md",
+    "docs/AGENTS.md",
+    "docs/cordis-api/inherited.md",
+    "docs/i18n/style-samples.md",
+    "docs/i18n/terminology.md",
+    "docs/i18n/translation-prompt.md",
+    "packages/bundle/medical/README.md",
+    "packages/medical/medical-agent-reach/README.md",
+    "packages/medical/medical-cloud/README.md",
+    "packages/medical/medical-context-packer/README.md",
+    "packages/medical/medical-diagrams/README.md",
+    "packages/medical/medical-math-engine/README.md",
+    "packages/medical/medical-quality-gates/README.md"
+  ]
+}

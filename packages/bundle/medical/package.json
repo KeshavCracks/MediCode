@@ -1,0 +1,64 @@
+{
+  "name": "@deepseek-ai/dsh-medical",
+  "description": "The dsh clinical decision-support bundle: medCloud provider (II-Medical-8B + MedGemma on Kaggle T4), deterministic clinical math, context packing, quality gates, editorial diagrams and read-only evidence reach, as a patch layer over dsh-web-app",
+  "version": "0.2.1-alpha.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "directory": "packages/bundle/medical"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "cordis.patch.yml",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {
+    "@deepseek-ai/dsh-agent-instructions": "workspace:*",
+    "@deepseek-ai/dsh-agent-preset": "workspace:*",
+    "@deepseek-ai/dsh-medical-agent-reach": "workspace:*",
+    "@deepseek-ai/dsh-medical-cloud": "workspace:*",
+    "@deepseek-ai/dsh-medical-context-packer": "workspace:*",
+    "@deepseek-ai/dsh-medical-diagrams": "workspace:*",
+    "@deepseek-ai/dsh-medical-math-engine": "workspace:*",
+    "@deepseek-ai/dsh-medical-quality-gates": "workspace:*",
+    "@deepseek-ai/dsh-persona": "workspace:*",
+    "@deepseek-ai/dsh-skill-filesystem": "workspace:*",
+    "@deepseek-ai/dsh-time-context": "workspace:*",
+    "@deepseek-ai/dsh-tool-ask-user": "workspace:*",
+    "@deepseek-ai/dsh-tool-fs": "workspace:*",
+    "@deepseek-ai/dsh-tool-fs-search": "workspace:*",
+    "@deepseek-ai/dsh-tool-present": "workspace:*",
+    "@deepseek-ai/dsh-tool-skill": "workspace:*",
+    "@deepseek-ai/dsh-tool-todo": "workspace:*"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "workspace:~",
+    "@deepseek-ai/cordis-plugin-loader": "workspace:~",
+    "@deepseek-ai/dsh-web-app": "workspace:*"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "workspace:~",
+    "@deepseek-ai/cordis-plugin-loader": "workspace:~"
+  }
+}
